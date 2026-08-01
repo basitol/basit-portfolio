@@ -1,29 +1,44 @@
 import { useEffect, useRef, useState } from 'react';
+import {
+  ArrowSquareOut,
+  Buildings,
+  ChatCircleText,
+  Code,
+  EnvelopeSimple,
+  GlobeHemisphereEast,
+  HardDrives,
+  Laptop,
+  MapPin,
+  Notification,
+  Phone,
+  RocketLaunch,
+  SquaresFour,
+} from '@phosphor-icons/react';
 
 const CHIP_CLASS = { violet: 'chip-v', amber: 'chip-a', teal: 'chip-t', rose: 'chip-r' };
 const EMAIL = 'qabdulbasit18@gmail.com';
 
 const skills = [
   {
-    icon: '⚡',
+    icon: Laptop,
     title: 'Frontend',
     tone: 'violet',
     chips: ['React.js', 'TypeScript', 'Vue.js', 'React Native', 'ShadCN UI', 'Redux'],
   },
   {
-    icon: '🔩',
+    icon: Code,
     title: 'Backend',
     tone: 'amber',
     chips: ['Node.js', 'Express.js', 'Django', 'Flask', 'GraphQL', 'Laravel'],
   },
   {
-    icon: '☁️',
+    icon: RocketLaunch,
     title: 'Cloud & DevOps',
     tone: 'teal',
     chips: ['AWS EC2', 'S3', 'Lambda', 'Docker', 'Kubernetes', 'CI/CD'],
   },
   {
-    icon: '🗄️',
+    icon: HardDrives,
     title: 'Data & Storage',
     tone: 'rose',
     chips: ['PostgreSQL', 'Redis', 'MongoDB', 'MySQL', 'Firebase', 'WebSocket'],
@@ -33,7 +48,6 @@ const skills = [
 const projects = [
   {
     label: 'Fintech',
-    emoji: '💳',
     title: 'Figo Africa — Fintech MVP',
     description:
       'Led the MVP build for a fintech platform with payment APIs, merchant management, RBAC, real-time payment notifications, and React dashboards.',
@@ -44,7 +58,6 @@ const projects = [
   },
   {
     label: 'Delivery',
-    emoji: '🚚',
     title: 'Sameday Custom — Delivery Platform',
     description:
       'Built a same-day delivery MVP with responsive frontend, live tracking, Redis-backed real-time updates, Stripe, PayPal, and dynamic delivery pricing.',
@@ -55,7 +68,6 @@ const projects = [
   },
   {
     label: 'eCommerce',
-    emoji: '🛒',
     title: 'Wicartit — Multi-Vendor Commerce',
     description:
       'Built a multi-vendor eCommerce platform with vendor inventory tools, real-time stock sync, RBAC admin dashboards, Paystack, and Flutterwave.',
@@ -66,7 +78,6 @@ const projects = [
   },
   {
     label: 'Systems',
-    emoji: '⚙️',
     title: 'Real-Time Product Systems',
     description:
       'Designed scalable APIs, authentication flows, dashboards, and real-time features across fintech, delivery, and commerce products.',
@@ -114,7 +125,7 @@ const embeddedRoles = [
 ];
 
 const outcomes = [
-  { value: '3+', label: 'Years experience' },
+  { value: '7+', label: 'Years experience' },
   { value: '40%', label: 'API response gain' },
   { value: '90%', label: 'Overselling reduced' },
   { value: '20%', label: 'Checkout lift' },
@@ -145,10 +156,10 @@ const experience = [
 ];
 
 const socials = [
-  { icon: '💼', tone: 'si-v', platform: 'LinkedIn', handle: 'Available on request', href: '#contact' },
-  { icon: '✉️', tone: 'si-a', platform: 'Email', handle: EMAIL, href: `mailto:${EMAIL}` },
-  { icon: '📍', tone: 'si-t', platform: 'Location', handle: 'Nigeria · Open to remote', href: '#contact' },
-  { icon: '📞', tone: 'si-r', platform: 'Phone', handle: '09131171967', href: 'tel:+2349131171967' },
+  { icon: Notification, tone: 'si-v', platform: 'LinkedIn', handle: 'Available on request', href: '#contact' },
+  { icon: EnvelopeSimple, tone: 'si-a', platform: 'Email', handle: EMAIL, href: `mailto:${EMAIL}` },
+  { icon: MapPin, tone: 'si-t', platform: 'Location', handle: 'Nigeria · Open to remote', href: '#contact' },
+  { icon: Phone, tone: 'si-r', platform: 'Phone', handle: '09131171967', href: 'tel:+2349131171967' },
 ];
 
 function App() {
@@ -373,7 +384,7 @@ function App() {
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" className="nav-cta">Hire Me →</a>
+        <a href="#contact" className="nav-cta">Hire Me</a>
       </nav>
 
       <section id="hero">
@@ -397,10 +408,10 @@ function App() {
             </span>
           </div>
           <p className="hero-desc">
-            Full-stack engineer with over three years of experience building and scaling web applications across fintech, delivery systems, eCommerce, and ticketing systems.
+            Full-stack engineer with over 7 years of experience building and scaling web applications across fintech, delivery systems, eCommerce, and ticketing systems.
           </p>
           <div className="hero-actions">
-            <a href="#projects" className="btn btn-primary">View My Work ↓</a>
+            <a href="#projects" className="btn btn-primary">View My Work</a>
             <a href="#contact" className="btn btn-ghost">Let&apos;s Connect</a>
           </div>
         </div>
@@ -425,7 +436,7 @@ function App() {
         <div className="hero-metrics">
           <div className="metric">
             <div className="metric-num">
-              <span className="count-up" data-target="3">0</span>+
+              <span className="count-up" data-target="7">0</span>+
             </div>
             <div className="metric-label">Years Exp</div>
           </div>
@@ -462,7 +473,10 @@ function App() {
             <div className="about-card">
               <div className="about-card-glow" />
               <div className="about-initials">QA</div>
-              <div className="about-tag">🇳🇬 Lagos, Nigeria</div>
+              <div className="about-tag">
+                <MapPin weight="bold" aria-hidden="true" />
+                <span>Lagos, Nigeria</span>
+              </div>
               <div className="about-corner corner-tl" />
               <div className="about-corner corner-br" />
             </div>
@@ -476,7 +490,7 @@ function App() {
               Hey, I&apos;m Abdulbasit Quadri, a full-stack developer focused on MVPs, scalable APIs, real-time product features, and clean user experiences.
             </p>
             <p className="reveal delay-3">
-              I&apos;ve worked across fintech, same-day delivery, and multi-vendor eCommerce products, building both the frontend interfaces and the backend systems that power them.
+              I&apos;ve worked on over 20 projects across fintech, same-day delivery, and multi-vendor eCommerce products, building both the frontend interfaces and the backend systems that power them.
             </p>
             <p className="reveal delay-4">
               My stack includes React.js, TypeScript, Node.js, PostgreSQL, Redis, WebSockets, Docker, AWS, and CI/CD pipelines.
@@ -484,7 +498,7 @@ function App() {
             <div className="about-facts reveal delay-5">
               <div className="fact">
                 <div className="fact-num">
-                  <span className="count-up" data-target="3">0</span>+ yrs
+                  <span className="count-up" data-target="7">0</span>+ yrs
                 </div>
                 <div className="fact-label">Experience</div>
               </div>
@@ -544,7 +558,9 @@ function App() {
           <div className="skills-grid">
             {skills.map((skill, i) => (
               <div key={skill.title} className={`skill-card reveal delay-${i + 1}`}>
-                <div className={`skill-icon-wrap ${skill.tone}`}>{skill.icon}</div>
+                <div className={`skill-icon-wrap ${skill.tone}`}>
+                  <skill.icon weight="bold" aria-hidden="true" />
+                </div>
                 <h3>{skill.title}</h3>
                 <div className="skill-tags">
                   {skill.chips.map((chip) => (
@@ -571,7 +587,7 @@ function App() {
             href="#contact"
             className="projects-all reveal delay-2"
           >
-            Request case studies →
+            Request case studies
           </a>
         </div>
         <div className="projects-grid">
@@ -579,7 +595,6 @@ function App() {
             <div key={project.title} className={`project-card reveal delay-${index + 1}`}>
               <div className={`project-thumb pt-${project.tone}`}>
                 <div className="project-thumb-grid" />
-                <span className="project-emoji">{project.emoji}</span>
                 <span className={`project-label lbl-${project.tone}`}>{project.label}</span>
               </div>
               <div className="project-body">
@@ -593,13 +608,16 @@ function App() {
                     ))}
                   </div>
                   <div className="project-links-row">
-                    <a href={project.demoHref} className="plink" title="Discuss project">↗</a>
+                    <a href={project.demoHref} className="plink" title="Discuss project" aria-label="Discuss project">
+                      <ArrowSquareOut weight="bold" aria-hidden="true" />
+                    </a>
                     <a
                       href={project.codeHref}
                       className="plink"
                       title="Email about this project"
+                      aria-label="Email about this project"
                     >
-                      ✉
+                      <EnvelopeSimple weight="bold" aria-hidden="true" />
                     </a>
                   </div>
                 </div>
@@ -644,7 +662,7 @@ function App() {
               Whether it&apos;s a new project, a full-time role, or just a technical conversation — I&apos;d love to hear from you. I respond within 24 hours.
             </p>
             <div className="contact-email reveal delay-3">
-              📬 <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
             </div>
             <div className="socials">
               {socials.map((social, i) => (
@@ -655,12 +673,16 @@ function App() {
                   target={social.href.startsWith('http') ? '_blank' : undefined}
                   rel={social.href.startsWith('http') ? 'noreferrer' : undefined}
                 >
-                  <div className={`social-icon ${social.tone}`}>{social.icon}</div>
+                  <div className={`social-icon ${social.tone}`}>
+                    <social.icon weight="bold" aria-hidden="true" />
+                  </div>
                   <div className="social-info">
                     <span className="social-platform">{social.platform}</span>
                     <span className="social-handle">{social.handle}</span>
                   </div>
-                  <span className="social-arrow">→</span>
+                  <span className="social-arrow">
+                    <ArrowSquareOut weight="bold" aria-hidden="true" />
+                  </span>
                 </a>
               ))}
             </div>
@@ -681,7 +703,7 @@ function App() {
                 <label htmlFor="message">Message</label>
                 <textarea id="message" name="message" placeholder="Tell me about your project..." required />
               </div>
-              <button type="submit" className="form-btn">Send Message →</button>
+              <button type="submit" className="form-btn">Send Message</button>
             </form>
           </div>
         </div>
